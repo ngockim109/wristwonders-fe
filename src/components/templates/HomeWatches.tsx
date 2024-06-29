@@ -26,6 +26,9 @@ const HomeWatches = ({ watches, brands, filterBrandName, onFilterChange }) => {
               value={selectedBrand} // Controlled component with local state
               onChange={handleSelectChange} // Handle selection change
             >
+              <option value="" disabled selected>
+                Select Brand
+              </option>
               <option value="All">All Brands</option>
               {brands.map((brand) => (
                 <option key={brand._id} value={brand.brandName}>
